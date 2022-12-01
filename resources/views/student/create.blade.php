@@ -1,7 +1,7 @@
 @extends('template.master')
 
 @section('judul')
-<h1>management kelas</h1>
+<h1>Management Siswa</h1>
 @endsection
 
 @section('content')
@@ -38,10 +38,15 @@
                 </select>
               </div>
                 <!-- /.card-body -->
+        
+                <a class="btn btn-primary mr-3" href="{{ route('student.index') }}">
+                <i class="fa fa-arrow-left"></i>
+                Back
+                </a>
+                
 
-                <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
+                
               </form>
             </div>
             

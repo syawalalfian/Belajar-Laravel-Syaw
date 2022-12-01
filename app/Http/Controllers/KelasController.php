@@ -14,7 +14,10 @@ class KelasController extends Controller
      */
     public function index()
     {
-        return view('class.index');
+        // untuk mengambil data
+        $dataKelas = DB::table('kelas')->get();
+        // statement diatas sama dengan SELECT * from siswa
+        return view('class.index', compact('dataKelas'));
     }
 
     /**
@@ -56,7 +59,9 @@ class KelasController extends Controller
      */
     public function show($id)
     {
-        //
+        $showKelasById = DB::table('kelas')->where('id', $id)->first(); 
+        // Statement diatas sama dengan  Select * from siswa where id = $id
+        return view('class.show', compact('showKelasById'));
     }
 
     /**
